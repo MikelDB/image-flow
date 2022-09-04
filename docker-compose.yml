@@ -1,0 +1,10 @@
+version: "3"
+services:
+  frontend:
+    image: node:18-alpine
+    command: yarn start
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app:delegated
